@@ -1,0 +1,68 @@
+.board,.users {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.board .list {
+    padding: 1.5rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+}
+
+.board header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.board header .buttonWrapper {
+    display: flex;
+    align-items: stretch;
+    gap: .5rem;
+}
+
+.board h2, h3 {
+    margin: unset;
+}
+
+button {
+    background: #d8d8d8;
+    border: none;
+    padding: .4rem .8rem;
+    cursor: pointer;
+    border-radius: .5rem;
+}
+
+.button:hover {
+    filter: brightness(90%);
+}
+
+.task {
+    background: rgba(216, 216, 216, 0.35);
+    padding: 1rem;
+    border-radius: .5rem;
+    margin-top: 1.5rem;
+}
+
+.task h3, .task p {
+    word-break: break-word;
+}
+
+.btnListContainer,.btnUserContainer {
+    grid-column: 1/ span 3;
+}
+
+.btnList ,.btnUser{
+    padding: .8rem 1.4rem;
+    font-size: .9rem;
+}
+
+.users .user div:not(:last-child){
+    margin-bottom: .6rem;
+}
+
+.user .label{
+    font-weight: bold;
+}

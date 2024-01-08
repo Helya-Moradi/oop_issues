@@ -16,7 +16,15 @@ class List {
         this.element = createElement(`<section class="list">
             <header>
                 <h2>${this.title}</h2>
-                <button class="btnTask">Add Task</button>
+                <div class="buttonWrapper">
+                
+                    <button class="btnListEdit">
+                        <img src="../../icons/pen-solid.svg" alt="editList">
+                    </button>
+                    
+                    <button class="btnTask">Add Task</button>
+                    
+                </div>
             </header>
             <div class="tasks"></div>       
         </section>`);
@@ -36,7 +44,9 @@ class List {
         const title = prompt('Enter Task Title:');
         const description = prompt('Enter Task Description:');
 
-        this.createTask(title, description);
+        if(title && description){
+            this.createTask(title, description);
+        }
     }
 
     editTask(id, title, description) {
